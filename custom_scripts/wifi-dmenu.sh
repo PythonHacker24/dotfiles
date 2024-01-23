@@ -1,0 +1,1 @@
+/usr/bin/wifi-dmenu.sh
