@@ -37,6 +37,7 @@ declare -a directories=(
   [2]="/root/.config/cheat_sheets"
   [3]="/root/.config/custom_scripts"
   [4]="/root/.config/status_crypto_coins"
+  [5]="/root/.config/rofi"
 )
 
 # Files to backup
