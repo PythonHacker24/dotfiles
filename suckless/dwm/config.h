@@ -71,6 +71,7 @@ static const char *firefox[] = { "firefox", NULL };
 static const char *poweroff[] = { "poweroff", NULL };
 static const char *reboot[] = { "reboot", NULL };
 static const char *lockscreen[] = { "slock", NULL };
+static const char *rofi[] = { "rofi", "-show", "run", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -80,6 +81,7 @@ static const Key keys[] = {
   { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = poweroff} },
   { MODKEY|ShiftMask,             XK_r,      spawn,          {.v = reboot } },
   { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockscreen } },
+  { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = rofi } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
