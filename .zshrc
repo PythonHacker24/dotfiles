@@ -22,7 +22,6 @@ alias nf="neofetch"
 alias cf="cpufetch"
 alias ff="fzf"
 alias dps="docker ps -a"
-alias bp="cat $HOME/.custom_config/black_panther_art.txt"
 alias :q="exit"
 alias fedit="cat << EOF > $1"     # Fast edit with cat and EOF
 alias ss="tty-clock -Ssc"
@@ -172,6 +171,6 @@ ginit() {       # Takes 1 arguement: remote repository link with .git ending
 export VISUAL=nvim
 export EDITOR=nvim
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
