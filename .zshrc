@@ -47,6 +47,10 @@ alias cat="bat"
 alias la="lsd -la"
 # Commands replacement ends
 
+pi () {
+  pacman -S python-"$1"
+}
+
 #dmenu config
 
 dop() {
