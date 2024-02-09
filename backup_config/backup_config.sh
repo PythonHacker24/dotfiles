@@ -76,7 +76,8 @@ done
 cd "$backup_folder" 
 git add .
 git commit -m "Latest Backup"
-git push git-server main 
+git push -u origin main 
+git push git-server main
 
 # Deleting buffer directory cache
 if [ "$clear_buffer_option" == "yes" ]; then 
