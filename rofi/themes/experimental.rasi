@@ -1,10 +1,10 @@
 * {
-    bg-col:  #C0CAF5;
+    bg-col:  #000000;
     bg-col-light: #000000;
-    border-col: #BB9AF7;
-    selected-col: #BB9AF7;
-    purple: #BB9AF7;
-    fg-col: #000000;
+    border-col: #7ED957;
+    selected-col: #7ED957;
+    hacker-green: #7ED957;
+    fg-col: #7ED957;
     fg-col2: #000000;
     grey: #737994;
 
@@ -36,7 +36,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @purple;
+    background-color: @hacker-green;
     padding: 6px;
     text-color: @bg-col;
     border-radius: 3px;
@@ -93,7 +93,7 @@ button {
 
 button selected {
   background-color: @bg-col;
-  text-color: @purple;
+  text-color: @hacker-green;
 }
 
 message {
@@ -106,6 +106,6 @@ message {
 textbox {
     padding: 6px;
     margin: 20px 0px 0px 20px;
-    text-color: @purple;
+    text-color: @hacker-green;
     background-color: @bg-col-light;
 }
