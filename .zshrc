@@ -34,6 +34,8 @@ alias cheat="bash ~/.config/cheat_sheets/cheat.sh"
 alias xss_payloads="cat ~/.config/cheat_sheets/xss_vectors.txt | fzf"
 alias driver_finder="find -type d -name linux-6.6.10 | cd - | find -type f -name Makefile | xargs grep '$1'"
 alias backup_config="~/.config/backup_config/backup_config.sh"
+alias audio-control="pavucontrol"
+alias headset="bluetoothctl connect $(cat ~/.headset_mac)"
 
 # tmux commands 
 alias tns="tmux new -s"   # tmux new session
