@@ -17,15 +17,20 @@ network_info() {
           operstate=$(cat "$interface/operstate")
 
           if [ "$operstate" = "up" ]; then
-              ip_address=$(ip -4 -o address show dev "$interface_name" | awk '{print $4}')
-              echo "$interface_name: $ip_address"
+              # ip_address=$(ip -4 -o address show dev "$interface_name" | awk '{print $4}')
+              # echo "$interface_name: $ip_address"
+              echo "$interface_name"
           fi
       fi
   done
 }
 
+bluetooth_devices() {
+  bluetoothctl info | grep -E 'Name: .*' -o | cut -d ':' -f2- | cut -d ' ' -f2-
+}
+
 status_monitor() {
-  xsetroot -name "$(cat ~/.config/status_crypto_coins/status_crypto.txt) | $(mem_usage) | $(cpu_usage) | $(network_info) | $(date '+%a %b %d %H:%M') | $(whoami)"
+  xsetroot -name "$(cat ~/.config/status_crypto_coins/status_crypto.txt) | $(mem_usage) | $(cpu_usage) | $(bluetooth_devices) | $(network_info) | $(date '+%a %b %d %H:%M') | $(whoami)"
 }
 
 status_bar_info() {

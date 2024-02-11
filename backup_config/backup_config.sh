@@ -38,6 +38,7 @@ declare -a directories=(
   [3]="/root/.config/custom_scripts"
   [4]="/root/.config/status_crypto_coins"
   [5]="/root/.config/rofi"
+  [6]="/root/.config/qemu_wizard"
 )
 
 # Files to backup
