@@ -177,6 +177,20 @@ ginit() {       # Takes 1 arguement: remote repository link with .git ending
 export VISUAL=nvim
 export EDITOR=nvim
 
+server_address="20.198.25.129"
+server_git_dir="/var/www/git"
+server_username="git"
+
+create_repo() {
+  ssh $server_username@$server_address "mkdir $server_git_dir/$1.git; cd $server_git_dir/$1.git; git init --rebase"
+}
+
+config_repo() {
+  echo "[remote '$1']" >> ./.git/config 
+  echo "url = $server_username@$server_address:/var/www/git/dsa.git" >> ./.git/config
+  echo "fetch = +refs/heads/*:refs/remotes/home/*" >> ./.git/config
+}
+
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
