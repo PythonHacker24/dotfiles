@@ -373,20 +373,31 @@ main(int argc, char **argv) {
 	if (setuid(duid) < 0)
 		die("slock: setuid: %s\n", strerror(errno));
 
+  /*
+    Custom Changes
+    - removed the screenshot of the screen 
+    - loaded the custom image 
+    - Now the slock displays the custom image as per the given directory
+  */
+
 	/*Create screenshot Image*/
-	Screen *scr = ScreenOfDisplay(dpy, DefaultScreen(dpy));
-	image = imlib_create_image(scr->width,scr->height);
-	imlib_context_set_image(image);
+	// Screen *scr = ScreenOfDisplay(dpy, DefaultScreen(dpy));
+	// image = imlib_create_image(scr->width,scr->height);
+	image = imlib_load_image("/root/.slock_image/background.webp");        // Custom Changes 
+  imlib_context_set_image(image);
 	imlib_context_set_display(dpy);
 	imlib_context_set_visual(DefaultVisual(dpy,0));
-	imlib_context_set_drawable(RootWindow(dpy,XScreenNumberOfScreen(scr)));	
-	imlib_copy_drawable_to_image(0,0,0,scr->width,scr->height,0,0,1);
+	// imlib_context_set_drawable(RootWindow(dpy,XScreenNumberOfScreen(scr)));	
+	// imlib_copy_drawable_to_image(0,0,0,scr->width,scr->height,0,0,1);
 
-#ifdef BLUR
+// #ifdef BLUR
 
 	/*Blur function*/
-	imlib_image_blur(blurRadius);
-#endif // BLUR	
+	// imlib_image_blur(blurRadius);
+// #endif // BLUR	
+
+// Custom Change
+// imlib_image_blur(10);
 
 #ifdef PIXELATION
 	/*Pixelation*/

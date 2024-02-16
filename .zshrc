@@ -36,6 +36,7 @@ alias driver_finder="find -type d -name linux-6.6.10 | cd - | find -type f -name
 alias backup_config="~/.config/backup_config/backup_config.sh"
 alias audio-control="pavucontrol"
 alias headset="bluetoothctl connect $(cat ~/.headset_mac)"
+alias qemu-wizard="~/.config/qemu_wizard/qemu_wizard.sh"
 
 # tmux commands 
 alias tns="tmux new -s"   # tmux new session

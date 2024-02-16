@@ -60,7 +60,12 @@ if [[ $option -eq 1 ]]; then
   echo "[+] Enter the Memory Size"
   read mem_size
 
-  qemu-system-x86_64 -m "$mem_size" -hda "$virtual_machines/$virtual_machine_name.img" -cdrom "$iso_file"
+  echo 
+  echo "[+] Enter the number of CPU cores"
+  read cpu_cores
+  echo
+
+  qemu-system-x86_64 -m "$mem_size" -smp $cpu_cores -hda "$virtual_machines/$virtual_machine_name.img" -cdrom "$iso_file"
   
   if [ -e "$virtual_machines/$virtual_machine_name.img" ]; then
     echo 
@@ -93,8 +98,12 @@ elif [[ "$option" == "2" ]]; then
   echo "[+] Enter the Memory Size"
   read mem_size
   echo 
-
-  qemu-system-x86_64 -hda "$virtual_machines/$machine_option.img" -m "$mem_size"
+  
+  echo 
+  echo "[+] Enter the number of CPU cores"
+  read cpu_cores
+  echo 
+  qemu-system-x86_64 -smp "$cpu_cores" -hda "$virtual_machines/$machine_option.img" -m "$mem_size"
   
 fi
 
