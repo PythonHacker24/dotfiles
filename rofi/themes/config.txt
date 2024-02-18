@@ -1,0 +1,6 @@
+Change this:
+
+- border-col
+- selected-col
+- hacker-green
+- fg-col

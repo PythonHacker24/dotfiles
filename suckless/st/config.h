@@ -116,7 +116,7 @@ static const char *colorname[] = {
   [0] = "#323437",
 	[1] = "#ff5454",
 	[2] = "#8cc85f",
-	[2] = "#7ED957",
+	[2] = "#1fede7",  // changed this 
   [3] = "#e3c78a",
 	[4] = "#80a0ff",
 	[5] = "#d183e8",
@@ -129,17 +129,17 @@ static const char *colorname[] = {
 	[12] = "#74b2ff",
 	[13] = "#ae81ff",
 	// [14] = "#85dc85",
-  [14] = "#7ED957",
+  [14] = "#1fede7", // changed this 
 	[15] = "#e2637f",
  
 
 
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-  [256] = "#7ED957",  // cursor color 
+  [256] = "#1fede7",  // cursor color 
   [257] = "#f8f8f2",  // rev cursor color 
   [258] = "#000000",  // background (bg) color 
-  [259]= "#7ED957",   // foreground (fg) color 
+  [259]= "#1fede7",   // foreground (fg) color 
 
 };
 

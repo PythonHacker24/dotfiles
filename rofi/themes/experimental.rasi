@@ -1,10 +1,10 @@
 * {
     bg-col:  #000000;
     bg-col-light: #000000;
-    border-col: #7ED957;
-    selected-col: #7ED957;
-    hacker-green: #7ED957;
-    fg-col: #7ED957;
+    border-col: #1fede7;    
+    selected-col: #1fede7;
+    hacker-green: #1fede7;
+    fg-col: #1fede7;
     fg-col2: #000000;
     grey: #737994;
 

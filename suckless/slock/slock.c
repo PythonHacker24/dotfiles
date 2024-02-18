@@ -143,6 +143,9 @@ readpw(Display *dpy, struct xrandr *rr, struct lock **locks, int nscreens,
 	running = 1;
 	failure = 0;
 	oldc = INIT;
+  
+  // Custom code 
+  XBell(dpy, 100);
 
 	while (running && !XNextEvent(dpy, &ev)) {
 		if (ev.type == KeyPress) {
@@ -383,7 +386,7 @@ main(int argc, char **argv) {
 	/*Create screenshot Image*/
 	// Screen *scr = ScreenOfDisplay(dpy, DefaultScreen(dpy));
 	// image = imlib_create_image(scr->width,scr->height);
-	image = imlib_load_image("/root/.slock_image/background.webp");        // Custom Changes 
+	image = imlib_load_image("/root/.slock_image/lockscreen.webp");        // Custom Changes 
   imlib_context_set_image(image);
 	imlib_context_set_display(dpy);
 	imlib_context_set_visual(DefaultVisual(dpy,0));

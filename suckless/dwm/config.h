@@ -7,10 +7,10 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:bold:size=10" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:bold:size=10";
-static const char col_1[]       = "#7ED957";
+static const char col_1[]       = "#1fede7"; // change this 7ED957
 static const char col_2[]       = "#000000";
 static const char col_3[]       = "#000000";
-static const char col_4[]       = "#7ED957";
+static const char col_4[]       = "#1fede7"; // change this 7ED957 
 static const char col_5[]        = "#000000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
