@@ -81,7 +81,7 @@ static const Key keys[] = {
   { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = poweroff} },
   { MODKEY|ShiftMask,             XK_r,      spawn,          {.v = reboot } },
   { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockscreen } },
-  { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = rofi } },
+  { MODKEY,                       XK_m,      spawn,          {.v = rofi } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
